@@ -1,4 +1,4 @@
-# Celio Herblay — Customer Loyalty Analysis 2025
+# Célio Herblay — Customer Loyalty Analysis 2025
 
 **Author:** Chaimaa MOURID  
 **Realisation:** 2026 | **Study case:** 2025  
@@ -8,12 +8,12 @@
 
 ## Context
 
-I work as a seller at Celio Herblay (Val d'Oise, France).  
+I work as a seller at Célio Herblay (Val d'Oise, France).  
 From my daily experience at the cashier, I identified two recurring operational problems that cause silent revenue loss for the store:
 
 1. **Expired coupons** — Customers accumulate €5 coupons through the loyalty program (€1 spent = 1 point, 150 points = €5 coupon). The coupon is visible on the cashier screen and is always applied when the customer visits. However, if the customer does not visit the store within the 2-month validity window, the coupon expires — and that visit never happens.
 
-2. **Missed birthday discounts** — Every customer is entitled to a 20% discount on their most expensive item during their birthday month. Unlike coupons, this discount is **not visible on the main cashier screen** — it requires the seller to manually check the customer profile. As a result, sellers miss it most of the time.
+2. **Missed birthday discounts** — Every customer is entitled to a 20% discount on their most expensive item during their birthday month. Unlike coupons, this discount is **not visible on the main cashier screen** — it requires the seller to manually check the customer profile. Similarly, the customer's **points balance is not visible on the cashier screen either**, which means sellers cannot proactively inform customers how close they are to their next coupon. As a result, both the birthday discount and the points progress go unnoticed most of the time.
 
 This project quantifies the revenue impact of both problems using SQL analysis and Power BI visualization.
 
@@ -81,10 +81,15 @@ The dashboard includes:
 
 ## Business Recommendations
 
-1. **SMS reminders** instead of email when a coupon is about to expire (higher open rate)
-2. **Add birthday discount alert** to the main cashier screen — same visibility as coupons
-3. **Verbal reminder** at the register when a customer has an expiring coupon
-4. **Monthly action list** of customers with active coupons to proactively contact them
+1. **Activate double opt-in at the cashier screen** — When registering a new customer to the loyalty program, systematically collect both SMS and email consent directly at the register. A larger reachable base means every following action (reminders, birthday alerts) reaches more customers and has a greater impact on store visits.
+
+2. **Automated reminder in the last week before expiry** — Send an automated SMS or email during the last 7 days of the coupon validity window. The message should feel personal and casual, in the tone of the Be+ program — for example: *"Oops, vous avez oublié quelque chose dans votre Be+ ! Votre bon d'achat de 5€ expire dans X jours. Profitez-en vite 🛍️"*. SMS has a significantly higher open rate than email, but having both channels activated maximizes the reach.
+
+3. **Add birthday discount and points balance to the main cashier screen** — Both the birthday discount and the customer's points progress are currently hidden and require the seller to manually check the customer profile. Displaying them directly on the cashier screen — the same way coupons are shown — would ensure sellers never miss them, without any extra effort or training required.
+
+4. **Verbal reminder at the register** — Encourage sellers to mention expiring coupons and points progress during checkout. A simple *"You have a €5 coupon expiring in X days"* or *"You only need X more points for your next coupon"* is enough to motivate a return visit.
+
+5. **Monthly action list** — Generate a monthly list of customers with active coupons expiring soon and contact them proactively via SMS or email to drive store visits before expiry.
 
 ---
 
@@ -95,15 +100,6 @@ The dashboard includes:
 ---
 
 ## Files
-
-| File | Description |
-|------|-------------|
-| `customers.csv` | Customer dataset |
-| `transactions.csv` | Transactions dataset |
-| `coupons.csv` | Coupons dataset |
-| `celio_analysis.sql` | All SQL queries with results |
-| `README.md` | This file |
-
 
 | File | Description |
 |------|-------------|

@@ -95,7 +95,7 @@ The dashboard includes:
 
 ## Disclaimer
 
-> The goal of this project is to learn and practice SQL analysis and Power BI. The dataset is entirely simulated — names, transactions, and figures are fictional and do not represent real Célio Herblay customers or actual store performance. It was generated to reflect realistic behavior based on real Célio pricing and French customer spending patterns, with the help of Claude AI (Anthropic) and my real experience as a seller.
+> The goal of this project is to learn and practice SQL analysis and Power BI. The dataset is entirely simulated names, transactions, and figures are fictional and do not represent real Célio Herblay customers or actual store performance. It was generated to reflect realistic behavior based on real Célio pricing and French customer spending patterns, with the help of Claude AI (Anthropic) and my real experience as a seller.
 
 ---
 
